@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My contacts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="onLoad()">
+
+    <table>
+
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <h1>Registrar mi contacto</h1>
+                    <div>
+                        <input type="hidden" name="id" id="id" ">
+                    </div>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido">
+                    </div>
+                    <div>
+                        <label for="correo">Correo</label>
+                        <input type="text" name="correo" id="correo">
+                    </div>
+
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Guardar">
+                        <input type="reset" value="Limpiar">
+                    </div>
+                   
+                </form>
+
+                <td>
+                    <table class="list" id="Listado">
+                        <thead>
+                            <tr>
+                                <input type="text"id=buscar>
+                                <button class="buscarbutton" onclick="buscarContacto()">Buscar</button>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
